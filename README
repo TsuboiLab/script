@@ -1,3 +1,43 @@
 各班でフォルダ分けしておいたので、そこに格納してください。
 他の人も使ったら便利だよーーってスクリプトに関してはgeneralに入れてください。
 wiki, projectの更新もお忘れなく。
+
+--- 2026/03/26 kawai add
+Windows環境で `uv` と `Git` を使って解析環境を構築する手順書です。
+
+## 1. 開発環境のセットアップ
+### Gitのインストールと設定
+1. [Git for Windows](https://gitforwindows.org/) をインストールします。
+2. VS Codeのターミナルで以下のコマンドを実行し、ユーザー設定を行います。
+   ```powershell
+   git config --global user.name "Your Name"
+   git config --global user.email "your-email@example.com"
+
+# 2. uvのインストールと実行許可
+Python管理ツール uv を導入し、スクリプトの実行制限を解除します
+   ```powershell
+    # uvのインストール
+    powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+    # PowerShellでのスクリプト実行（仮想環境の起動）を許可
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# 3. プロジェクトの初期化とパッケージ導入
+分析環境(work)内に移動してuvによりpythonの仮想環境を構築します
+   ```powershell
+    # 既存のuv環境(python3.12)を再現
+    uv sync
+
+# 4. 仮想環境の有効化
+   ```powershell
+    # 仮想環境の有効化
+    .venv\Scripts\activate
+
+# 5. GitHubへの初回連携と保存
+PCローカルとgithubのリモートとを連携
+   ```powershell
+    # Gitの初期化とリモート追加
+    git init
+    git clone https://github.com/TsuboiLab/script.git
+    git remote add origin https://github.com/TsuboiLab/script.git
+
+---
