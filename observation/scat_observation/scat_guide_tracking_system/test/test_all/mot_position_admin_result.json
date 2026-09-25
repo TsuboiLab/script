@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "position": {
+    "sampled_at_utc": "2026-09-18T10:20:13.997794+00:00",
+    "source": "Master2018 process memory; experimental",
+    "controller_data_freshness": "unknown",
+    "ra_j2000_hours": 12.507522971578663,
+    "dec_j2000_deg": 87.80185710438795,
+    "azimuth_software_deg": 2.771977611745705,
+    "altitude_software_deg": 35.10188744259007,
+    "raw": {
+      "TelPosLon": 2.771977611745705,
+      "TelPosLat": 35.10188744259007,
+      "TelPosJ2kRa": 12.507522971578663,
+      "TelPosJ2kDec": 87.80185710438795,
+      "TelPosIntRa": 12.896694444444444,
+      "TelPosIntDec": 87.5475,
+      "DomRotDir": 178.7,
+      "DomRotAutoFlag": 0,
+      "TelStat": 0,
+      "DomRtSt": 0,
+      "DomSlSt": 0,
+      "ContModeSt": 1,
+      "PwrStat": 1,
+      "EmgStat": 0,
+      "CntStat": 0,
+      "RainStat": 0,
+      "ComStat": 2
+    }
+  }
+}
