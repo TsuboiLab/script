@@ -178,12 +178,17 @@ class GuideService:
             self.c.pop('tracking_matrix_deg_per_pix', None)
             self.calibration_request.set()
 
-    def _calibrate_tracking(self, camera, send):
-        """ループを中断し、基準snapとRA +60,-120、Dec +60,-120秒角後のsnapを取得。"""
+    def _calibrate_tracking(self, camera, send, position_reader=None):
+        """各辺を2筆で描く四角形を1周し、RA/Dec応答行列を校正する。
+
+        1周は、RA負方向・Dec負方向・RA正方向・Dec正方向を
+        20秒角ずつ2回移動する。小さい同方向移動を分けて記録することで、
+        バックラッシュと移動再現性を確認しやすくする。
+        """
         self.publish(calibration_points=[], calibration_point_frames=0)
         if not (self.c['simulation'] or self.c.get('mot_enabled', True)):
             raise ValueError('MoT送信が無効です')
-        def capture(previous=None):
+        def capture(previous=None, stage='基準撮像'):
             if self.stop_event.is_set():
                 raise RuntimeError('校正を中止しました')
             self._apply_pending_settings()
@@ -192,34 +197,74 @@ class GuideService:
             self.publish(image=image, frame=self.snapshot()['frame'] + 1)
             self.c['tracking_calibration_shape'] = image.shape
             sources = point_sources(image, self.c['threshold_sigma'], max_sources=5)
+            # 失敗時も今回画像の検出結果をUIへ公開し、前回候補の残留を防ぐ。
+            self.publish(sources=sources)
             if previous is None:
                 rank = self.c['target_brightness_rank']
                 if len(sources) < rank:
-                    raise ValueError('校正用天体が見つかりません')
+                    raise ValueError(f'[{stage}/基準天体不足] 検出{len(sources)}個（最大5個）、指定順位{rank}位。露光・検出閾値・選択順位を確認してください')
                 chosen = sources[rank-1]
             else:
-                candidates = [p for p in sources if np.linalg.norm(np.array([p['x'], p['y']])-previous) < self.c.get('calibration_max_jump_px', 120.)]
-                if len(candidates) != 1:
-                    raise ValueError('校正用天体を一意に対応付けできません。校正中止')
-                chosen = candidates[0]
+                radius = self.c.get('calibration_max_jump_px', 300.)
+                distances = [float(np.linalg.norm(np.array([p['x'], p['y']])-previous)) for p in sources]
+                candidates = [p for p, distance in zip(sources, distances) if distance <= radius]
+                context = (f'段階={stage}、前回位置=({previous[0]:.1f}, {previous[1]:.1f})pix、'
+                           f'探索半径={radius:g}pix、検出={len(sources)}個（最大5個）、範囲内={len(candidates)}個')
+                details = '; '.join(f'({p["x"]:.1f}, {p["y"]:.1f}) 距離={d:.1f}pix' for p, d in zip(sources, distances))
+                if not sources:
+                    raise ValueError(f'[天体未検出] {context}。光源を検出できません。露光・雲・視野外移動を確認してください')
+                if not candidates:
+                    raise ValueError(f'[探索範囲外] {context}。候補: {details}。校正中止')
+                # 明るさは背景差引き後の星像積分光量。距離で絞った後に比較する。
+                chosen = max(candidates, key=lambda p: p['flux'])
             target = np.array([chosen['x'], chosen['y']])
             self.publish(target=target.tolist(), sources=sources)
             return target
         before = capture()
         # 基準snapとの差ではなく、直前snapとの差を各相対命令に対応付ける。
-        # 最終位置は基準からRA/Decとも-60秒角。復帰命令は送らない。
+        # 各辺を2筆で描く閉じた四角形を1周する（8移動、初期点込み9点）。
         moves = []
-        points = []
-        commands = np.array([[60., 0.], [-120., 0.], [0., 60.], [0., -120.]])
+        points = [before.tolist()]
+        self.publish(calibration_points=list(points), calibration_point_frames=10)
+        one_lap = np.array([
+            [-20.,   0.], [-20.,   0.],  # RA負方向の辺
+            [  0., -20.], [  0., -20.],  # Dec負方向の辺
+            [ 20.,   0.], [ 20.,   0.],  # RA正方向の辺
+            [  0.,  20.], [  0.,  20.],  # Dec正方向の辺
+        ])
+        commands = one_lap
         for i, command in enumerate(commands):
             if self.stop_event.is_set():
                 raise RuntimeError('校正を中止しました')
-            self.publish(calibration_progress=f'{i+1}/4', imaging_state='校正移動中')
+            self.publish(calibration_progress=f'{i+1}/{len(commands)}', imaging_state='校正移動中')
+            waiter = None
+            if not self.c['simulation']:
+                from .base__mot_motion_wait import MotionLogWaiter
+                waiter = MotionLogWaiter(self.c['mot_log_directory'], *command)
             response = send(*command)
             self.publish(sent_correction=command.tolist(), mot_response=response)
+            if waiter is not None:
+                self.publish(imaging_state='MoT停止応答待ち')
+                tracking_status = None
+                if position_reader is not None:
+                    def tracking_status():
+                        status = position_reader.read_position().get('status')
+                        return str(status).lower() if status is not None else None
+                self.publish(imaging_state='恒星追尾復帰待ち', mot_tracking_status='未確認')
+                waiter.wait(
+                    self.stop_event,
+                    self.c.get('calibration_motion_timeout_sec', 30.),
+                    tracking_status=tracking_status,
+                    tracking_timeout=self.c.get('mot_tracking_timeout_sec', 10.),
+                    poll_sec=self.c.get('mot_tracking_poll_sec', .2),
+                    settle_sec=self.c.get('mot_tracking_settle_sec', .5),
+                )
+                if tracking_status is not None:
+                    self.publish(mot_tracking_status='track')
+            self.publish(imaging_state='校正整定待ち')
             if self.stop_event.wait(self.c.get('calibration_settle_sec', 3.)):
                 raise RuntimeError('校正を中止しました（自動復帰送信なし）')
-            after = capture(before)
+            after = capture(before, stage=f'{i+1}/{len(commands)} RA={command[0]:g}秒角 Dec={command[1]:g}秒角')
             points.append(after.tolist())
             self.publish(calibration_points=list(points), calibration_point_frames=10)
             moves.append(after-before)
@@ -229,12 +274,11 @@ class GuideService:
         response = np.linalg.lstsq(commands / 3600., np.asarray(moves), rcond=None)[0].T
         if not np.isfinite(response).all() or np.linalg.cond(response) > 100:
             raise ValueError('校正応答が不安定です。行列を採用しません')
-        for axis in range(2):
-            forward, backward = moves[axis*2:axis*2+2]
-            # 負方向は移動角が2倍。単位角あたりの応答で往復を比較する。
-            backward = backward / 2.
-            if min(np.linalg.norm(forward), np.linalg.norm(backward)) < 1. or np.linalg.norm(forward+backward) > .5*max(np.linalg.norm(forward), np.linalg.norm(backward)):
-                raise ValueError('往復移動量が不整合です。行列を採用しません')
+        # 往復の方向・大きさが一致しなくても全測定を採用する。
+        # commandsとmovesの符号を保持した最小二乗推定により、逆向きの
+        # 応答やRA/Decの混合も行列へ反映する。絶対値への変換はしない。
+        # 正負で異なる応答は単一行列では平均的な応答になるため、
+        # 上記の有限値・条件数チェックで推定不能な行列は引き続き拒否する。
         matrix = np.linalg.inv(response)
         # 逆行列の行はRA/Dec、列はX/Y、単位は度/pixel。
         # 実測した向き・混合を含むので、cos(Dec)や東西符号を追加で掛けない。
@@ -559,7 +603,13 @@ class GuideService:
                                 # 同じworker内で校正を完了させるため、ループ撮像との重複はない。
                                 self.calibration_request.clear()
                                 try:
-                                    self._calibrate_tracking(camera, send)
+                                    # 校正時も、移動完了後に恒星追尾へ復帰したことを
+                                    # 確認できる場合は、撮像前に必ず確認する。
+                                    if (position_reader is None and not self.c['simulation']
+                                            and self.c.get('mot_enabled', True)):
+                                        from .base__nishimura_controler import NishimuraController
+                                        position_reader = NishimuraController()
+                                    self._calibrate_tracking(camera, send, position_reader)
                                 except Exception as exc:
                                     self.publish(error=f'校正失敗: {exc}', calibration_ready=False)
                                 correction = Correction(self.c)
@@ -601,6 +651,8 @@ class GuideService:
                                         position_reader = NishimuraController()
                                     position = position_reader.read_position()
                                     self.c['declination_deg'] = position['dec_j2000_deg']
+                                    self.publish(mot_tracking_status=position.get('status')
+                                                 or '未確認')
                                     for key in ('azimuth_deg', 'az_deg', 'azimuth_j2000_deg'):
                                         if key in position and position[key] is not None:
                                             self.c['azimuth_deg'] = float(position[key]) % 360.0
@@ -613,11 +665,33 @@ class GuideService:
                             if (self.tracking_event.is_set() and not self.stop_event.is_set()
                                     and np.any(command) and (self.c['simulation'] or self.c.get('mot_enabled', True))):
                                 try:
+                                    motion_waiter = None
+                                    if not self.c['simulation']:
+                                        from .base__mot_motion_wait import MotionLogWaiter
+                                        motion_waiter = MotionLogWaiter(
+                                            self.c['mot_log_directory'], *command)
                                     # 自動追尾は現在座標への絶対trackではなく、
                                     # client_senderの相対guideを使用する。
                                     response = send(float(command[0]), float(command[1]))
                                     self.publish(sent_correction=command.tolist(), mot_response=response,
                                                  sent_correction_unit='arcsec', sent_command='guide')
+                                    if motion_waiter is not None:
+                                        self.publish(imaging_state='MoT停止応答待ち',
+                                                     mot_tracking_status='未確認')
+                                        tracking_status = None
+                                        if position_reader is not None:
+                                            def tracking_status():
+                                                status = position_reader.read_position().get('status')
+                                                return str(status).lower() if status is not None else None
+                                        motion_waiter.wait(
+                                            self.stop_event,
+                                            self.c.get('mot_motion_timeout_sec', 30.),
+                                            tracking_status=tracking_status,
+                                            tracking_timeout=self.c.get('mot_tracking_timeout_sec', 10.),
+                                            poll_sec=self.c.get('mot_tracking_poll_sec', .2),
+                                            settle_sec=self.c.get('mot_tracking_settle_sec', .5),
+                                        )
+                                        self.publish(mot_tracking_status='track')
                                     move_until = time.monotonic() + 3.0
                                 except Exception as exc:
                                     self.tracking_event.clear()

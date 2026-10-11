@@ -14,12 +14,15 @@ Correction, Service = scope['Correction'], scope['GuideService']
 
 class CalibrationTests(unittest.TestCase):
     def test_calibration_mixed_axes_and_units(self):
-        h = np.array([[.5, .15], [-.1, .4]])  # pixel/arcsec
+        h = np.array([[-.5, .15], [-.1, -.4]])  # pixel/arcsec: inverse response allowed
         class Camera:
             position = np.array([200., 200.])
             def capture(self): return self.position.copy()
         camera = Camera()
-        scope['point_sources'] = lambda image, *a, **k: [dict(x=image[0], y=image[1])]
+        scope['point_sources'] = lambda image, *a, **k: [
+            dict(x=image[0], y=image[1], flux=100.),
+            dict(x=image[0]+5, y=image[1]+5, flux=10.),
+            dict(x=image[0]+1000, y=image[1], flux=1000.)]
         service = Service.__new__(Service)
         service.c = dict(simulation=True, threshold_sigma=3, target_brightness_rank=1, calibration_settle_sec=0)
         service.stop_event = threading.Event()
@@ -33,14 +36,17 @@ class CalibrationTests(unittest.TestCase):
             sent.append([ra, dec])
             camera.position += h @ [ra, dec]
         service._calibrate_tracking(camera, send)
-        np.testing.assert_allclose(sent, [[60,0],[-120,0],[0,60],[0,-120]])
+        expected = ([[-20, 0], [-20, 0], [0, -20], [0, -20],
+                     [20, 0], [20, 0], [0, 20], [0, 20]])
+        np.testing.assert_allclose(sent, expected)
         np.testing.assert_allclose(service.c['tracking_matrix_deg_per_pix'], np.linalg.inv(h)/3600)
-        np.testing.assert_allclose(camera.position, np.array([200,200]) + h @ [-60,-60])
-        self.assertEqual(len(data['calibration_points']), 4)
+        np.testing.assert_allclose(camera.position, np.array([200,200]))
+        self.assertEqual(len(data['calibration_points']), 9)
+        np.testing.assert_allclose(data['calibration_points'][0], [200., 200.])
         service.lock = threading.Lock()
         service.data = data
         for _ in range(9): service._advance_calibration_points()
-        self.assertEqual(len(data['calibration_points']), 4)
+        self.assertEqual(len(data['calibration_points']), 9)
         service._advance_calibration_points()
         self.assertEqual(data['calibration_points'], [])
         service.c.update(max_correction=0, auto_gain_enabled=True)

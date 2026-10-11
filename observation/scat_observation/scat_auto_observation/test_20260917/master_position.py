@@ -31,6 +31,10 @@ INT_FIELDS = {'DomRotAutoFlag':72, 'TelStat':76, 'DomRtSt':104,
               'DomSlSt':108, 'ContModeSt':124, 'PwrStat':128,
               'EmgStat':132, 'CntStat':136, 'RainStat':140, 'ComStat':160}
 
+# Master2018のMakeStatus()が返す表示状態。未解析コードはNoneにする。
+TEL_STATUS = {1: 'stop', 2: 'track', 3: 'track', 8: 'track',
+              4: 'move', 5: 'move', 6: 'move', 9: 'error'}
+
 def decode(data):
     """一括取得したバイト列を復号する。装置データの鮮度は判定しない。"""
     if len(data) != BLOCK_SIZE:
@@ -42,6 +46,8 @@ def decode(data):
     return {'sampled_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
             'source': 'Master2018 process memory; experimental',
             'controller_data_freshness': 'unknown',
+            'status': TEL_STATUS.get(raw['TelStat']),
+            'tel_stat': raw['TelStat'],
             'ra_j2000_hours': raw['TelPosJ2kRa'], 'dec_j2000_deg': raw['TelPosJ2kDec'],
             'azimuth_software_deg': raw['TelPosLon'],
             'altitude_software_deg': raw['TelPosLat'], 'raw': raw}

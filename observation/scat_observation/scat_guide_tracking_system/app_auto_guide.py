@@ -64,13 +64,21 @@ def render_image(s):
                 yy, xx = np.ogrid[max(y-5,0):min(y+6,rgb.shape[0]), max(x-5,0):min(x+6,rgb.shape[1])]
                 patch = rgb[max(y-5,0):min(y+6,rgb.shape[0]), max(x-5,0):min(x+6,rgb.shape[1])]
                 patch[(xx-x)**2+(yy-y)**2 <= 25] = color
-    for point in s.get('calibration_points', []):
+    calibration_points = s.get('calibration_points', [])
+    # 基準位置0→移動後1→2→3→4→5を結ぶ。FITS値は変更しない。
+    for start, end in zip(calibration_points, calibration_points[1:]):
+        steps = max(2, int(np.ceil(np.max(np.abs(np.asarray(end)-start)))) + 1)
+        line = np.rint(np.linspace(start, end, steps)).astype(int)
+        valid = (line[:, 0] >= 0) & (line[:, 0] < rgb.shape[1]) & (line[:, 1] >= 0) & (line[:, 1] < rgb.shape[0])
+        line = line[valid]
+        rgb[line[:, 1], line[:, 0]] = [0., 1., 0.]
+    for point in calibration_points:
         x, y = np.rint(point).astype(int)
         if 0 <= y < rgb.shape[0] and 0 <= x < rgb.shape[1]:
             yy, xx = np.ogrid[max(y-5,0):min(y+6,rgb.shape[0]), max(x-5,0):min(x+6,rgb.shape[1])]
             patch = rgb[max(y-5,0):min(y+6,rgb.shape[0]), max(x-5,0):min(x+6,rgb.shape[1])]
             patch[(xx-x)**2+(yy-y)**2 <= 25] = [0., 1., 0.]
-    st.image(rgb, caption='黄: 固定スリット位置　赤: 選択天体　緑: 校正時の4位置', width='stretch')
+    st.image(rgb, caption='黄: 固定スリット位置　赤: 選択天体　緑: 基準位置0＋移動後1〜5の計6点と軌跡', width='stretch')
     o=s.get('offset',[0,0]); q=s.get('correction',[0,0])
     needed = s.get('correction_needed', False)
     distance = s.get('correction_distance_px', float(np.linalg.norm(o)))
@@ -147,7 +155,9 @@ def panel():
     with control_col:
         tracking_tab, mot_main_tab = st.tabs(['基本操作', '開発用オプション'])
         with tracking_tab:
-            with st.container(height=246, border=False):
+            # ボタンを右枠の半分にまとめ、状態を同じ高さで確認できる配置。
+            button_col, status_col = st.columns([1, 1], gap='small')
+            with button_col:
                 a, b = st.columns(2)
                 idle = s['state'] in ('準備完了', '追尾終了')
                 a.button('カメラ電源ON', disabled=s['state'] not in ('未接続', 'エラー'), on_click=guide.connect, width='stretch')
@@ -168,6 +178,25 @@ def panel():
                 a, b = st.columns(2)
                 a.button('自動追尾ON', disabled=s['state'] != '連続撮像中' or 'slit' not in s or not s.get('calibration_ready'), on_click=guide.start, width='stretch')
                 b.button('自動追尾OFF', disabled=s['state'] not in ('追尾中', '追尾開始中'), on_click=guide.stop_tracking, width='stretch')
+            with status_col:
+                st.caption('カメラステータス')
+                st.write(f"接続　{'ON' if s.get('connected') else 'OFF'}")
+                cooling_status = '変更中' if s.get('state') == '冷却中' else ('ON' if s.get('cooling') else 'OFF')
+                st.write(f'冷却　{cooling_status}')
+                t = s.get('temperature')
+                st.write(f'カメラ温度　{float(t):.1f} °C' if t is not None else 'カメラ温度　--.- °C')
+                guide.c['temperature_c'] = st.number_input(
+                    '目標温度 °C', value=float(guide.c.get('temperature_c', 0.0)),
+                    step=0.1, format='%.1f', key='target_temperature_c')
+                st.write(f"撮像　{s.get('imaging_state', '待機中')}")
+                st.write(f"操作　{s['state']}（Frame {s['frame']}）")
+                if s['state'] == '校正中':
+                    st.info(f"校正中　{s.get('calibration_progress', '準備中')}")
+                elif s.get('calibration_ready'):
+                    st.success('✓ 追尾校正完了')
+                else:
+                    st.warning('追尾校正未完了')
+                st.caption(f"最終校正日時: {s.get('calibration_time', '未校正')}")
             if 'slit' in s:
                 st.caption(f"スリット中心 X={s['slit'][0]:.2f}, Y={s['slit'][1]:.2f} pix ／ {s.get('slit_origin', '検出値')}")
             if s.get('sources'):
@@ -175,18 +204,6 @@ def panel():
                                '明るさ（背景差引積算）': round(p['flux'], 1),
                                '選択': i+1 == guide.c['target_brightness_rank']}
                               for i, p in enumerate(s['sources'][:5])], hide_index=True)
-            st.subheader('カメラステータス')
-            st.write(f"**コネクト状態**　{'ON' if s.get('connected') else 'OFF'}")
-            cooling_status = '変更中' if s.get('state') == '冷却中' else ('ON' if s.get('cooling') else 'OFF')
-            st.write(f"**冷却状態**　{cooling_status}")
-            temp_cols = st.columns(2)
-            t=s.get('temperature')
-            temp_cols[0].metric('カメラ温度', f'{float(t):.1f} °C' if t is not None else '--.- °C')
-            guide.c['temperature_c'] = temp_cols[1].number_input(
-                '目標温度 °C', value=float(guide.c.get('temperature_c', 0.0)),
-                step=0.1, format='%.1f', key='target_temperature_c')
-            st.write(f"**撮像状態**　{s.get('imaging_state','待機中')}")
-            st.write(f"**操作状態**　{s['state']}　（Frame {s['frame']}）")
             if s.get('save_error'):
                 st.warning(f"画像保存は保留中です（撮像は継続）: {s['save_error']}")
             exposure = st.number_input(
@@ -233,6 +250,8 @@ def panel():
                 corrected_ra = (ra + correction[0] / 54000.0) % 24.0
                 corrected_dec = dec + correction[1] / 3600.0
                 st.caption('MoT現在位置（約0.5秒更新）')
+                mot_status = pos.get('status') or '追尾状態未確認'
+                st.write(f'**恒星追尾状態**　{mot_status}')
                 st.write(f"**鏡筒 RA (J2000)**　{ra:.8f} h　→ 補正後 {corrected_ra:.8f} h")
                 st.write(f"**鏡筒 Dec (J2000)**　{dec:.8f} °　→ 補正後 {corrected_dec:.8f} °")
                 st.write(f"**鏡筒方向 方位**　{pos['azimuth_software_deg']:.8f} °")
