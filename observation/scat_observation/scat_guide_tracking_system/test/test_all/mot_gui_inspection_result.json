@@ -1,0 +1,95 @@
+{
+  "inspection": {
+    "pid": 13124,
+    "form_object": "0x4bed110",
+    "buttons": {
+      "dome-link:on": {
+        "component": "ButtonDomRotAutoOn",
+        "object_address": "0x4bad630",
+        "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+      },
+      "dome-link:off": {
+        "component": "ButtonDomRotAutoOff",
+        "object_address": "0x4baca70",
+        "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+      },
+      "slit:open": {
+        "component": "ButtonDomSltOpen",
+        "object_address": "0x4ba54f0",
+        "hwnd": 133694,
+        "pid": 13124,
+        "class_name": "TButton",
+        "caption": "IN",
+        "object_addresses": [
+          79320304
+        ],
+        "visible": true,
+        "enabled": false,
+        "under_form": true
+      },
+      "slit:close": {
+        "component": "ButtonDomSltClose",
+        "object_address": "0x4bae1f0",
+        "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+      },
+      "slit:stop": {
+        "component": "ButtonDomSltStop",
+        "object_address": "0x4badc10",
+        "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+      }
+    },
+    "form_window": {
+      "hwnd": 1048596,
+      "pid": 13124,
+      "class_name": "TFormMenu",
+      "caption": " Master of Telescope 2018.01EQ",
+      "object_addresses": [
+        79614224
+      ],
+      "visible": true,
+      "enabled": true
+    }
+  },
+  "position": {
+    "sampled_at_utc": "2026-09-18T10:23:36.724920+00:00",
+    "source": "Master2018 process memory; experimental",
+    "controller_data_freshness": "unknown",
+    "ra_j2000_hours": 12.567809343517897,
+    "dec_j2000_deg": 87.80149907199934,
+    "azimuth_software_deg": 2.771980929075973,
+    "altitude_software_deg": 35.101898460480434,
+    "raw": {
+      "TelPosLon": 2.771980929075973,
+      "TelPosLat": 35.101898460480434,
+      "TelPosJ2kRa": 12.567809343517897,
+      "TelPosJ2kDec": 87.80149907199934,
+      "TelPosIntRa": 12.953194444444444,
+      "TelPosIntDec": 87.5475,
+      "DomRotDir": 178.7,
+      "DomRotAutoFlag": 0,
+      "TelStat": 0,
+      "DomRtSt": 0,
+      "DomSlSt": 0,
+      "ContModeSt": 1,
+      "PwrStat": 1,
+      "EmgStat": 0,
+      "CntStat": 0,
+      "RainStat": 0,
+      "ComStat": 2
+    }
+  },
+  "resolution": {
+    "slit:open": {
+      "ok": false,
+      "error": "GUI\u5074\u3067\u64cd\u4f5c\u304c\u7121\u52b9\u3067\u3059\u3002\u7121\u52b9\u5316\u3092\u8fc2\u56de\u305b\u305a\u4e2d\u6b62\u3057\u307e\u3057\u305f"
+    },
+    "slit:close": {
+      "ok": false,
+      "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+    },
+    "slit:stop": {
+      "ok": false,
+      "error": "TButton\u306eVCL/ HWND\u7167\u5408\u304c\u4e00\u610f\u3067\u306f\u3042\u308a\u307e\u305b\u3093: 0\u4ef6\u3002GUI\u3092\u8868\u793a\u3057\u3001inspect-gui\u3067\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u63a8\u6e2c\u30af\u30ea\u30c3\u30af\u306f\u884c\u3044\u307e\u305b\u3093"
+    }
+  }
+}

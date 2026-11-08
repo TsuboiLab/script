@@ -1,0 +1,36 @@
+{
+  "reference_image": "test_sigmagem_nearby_slit.fit",
+  "source_image": "test_sigmagem_nearby_slit.fit",
+  "coordinate_convention": "zero-based x=column, y=row; offset=slit-source",
+  "slit_roi": [
+    880,
+    250,
+    1130,
+    850
+  ],
+  "slit_xy_px": [
+    1007.1135526382116,
+    564.2763602321538
+  ],
+  "source_xy_px": [
+    994.7124826587769,
+    538.2534969520655
+  ],
+  "slit_minus_source_px": [
+    12.401069979434624,
+    26.02286328008836
+  ],
+  "source_minus_slit_px": [
+    -12.401069979434624,
+    -26.02286328008836
+  ],
+  "distance_px": 28.826653463921296,
+  "saturated_pixels_ge_65535": 31,
+  "same_image": true,
+  "slit_center_definition": "detected endpoint midpoint",
+  "threshold_sensitivity_range_px": [
+    1.376648295824225,
+    1.721196723999924
+  ],
+  "perpendicular_distance_to_slit_axis_px": 18.39008983370561
+}

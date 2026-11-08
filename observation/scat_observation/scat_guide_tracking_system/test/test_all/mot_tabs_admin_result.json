@@ -1,0 +1,3225 @@
+{
+  "at": "2026-09-18T10:53:03.480419+00:00",
+  "pid": 13124,
+  "windows": [
+    {
+      "hwnd": 854090,
+      "pid": 13124,
+      "class_name": "TFormOpening",
+      "caption": "\u8d77\u52d5\u51e6\u7406",
+      "object_addresses": [
+        129366896
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        234,
+        234,
+        585,
+        422
+      ]
+    },
+    {
+      "hwnd": 133710,
+      "pid": 13124,
+      "class_name": "TFormVersion",
+      "caption": "\u30d0\u30fc\u30b8\u30e7\u30f3\u60c5\u5831",
+      "object_addresses": [
+        129362928
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        182,
+        182,
+        529,
+        462
+      ]
+    },
+    {
+      "hwnd": 394444,
+      "pid": 13124,
+      "class_name": "TFormED",
+      "caption": "Edit Pointing Errors",
+      "object_addresses": [
+        129358960
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        130,
+        130,
+        748,
+        726
+      ]
+    },
+    {
+      "hwnd": 459938,
+      "pid": 13124,
+      "class_name": "TFormPError",
+      "caption": "Pointing Error Correction Parameters",
+      "object_addresses": [
+        129506224
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        104,
+        104,
+        687,
+        690
+      ]
+    },
+    {
+      "hwnd": 788146,
+      "pid": 13124,
+      "class_name": "TFormMonitor",
+      "caption": "\u52d5\u4f5c\u30e2\u30cb\u30bf",
+      "object_addresses": [
+        79795616
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        130,
+        130,
+        738,
+        587
+      ]
+    },
+    {
+      "hwnd": 2426326,
+      "pid": 13124,
+      "class_name": "TMemo",
+      "caption": "",
+      "object_addresses": [
+        79249696
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 788146,
+      "rect": [
+        143,
+        166,
+        723,
+        532
+      ]
+    },
+    {
+      "hwnd": 1048596,
+      "pid": 13124,
+      "class_name": "TFormMenu",
+      "caption": " Master of Telescope 2018.01EQ",
+      "object_addresses": [
+        79614224
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        -10,
+        0,
+        1280,
+        1002
+      ]
+    },
+    {
+      "hwnd": 526698,
+      "pid": 13124,
+      "class_name": "TEdit",
+      "caption": "---",
+      "object_addresses": [
+        79248320
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        777,
+        884,
+        898,
+        912
+      ]
+    },
+    {
+      "hwnd": 460914,
+      "pid": 13124,
+      "class_name": "TEdit",
+      "caption": "---",
+      "object_addresses": [
+        79246944
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        808,
+        951,
+        897,
+        979
+      ]
+    },
+    {
+      "hwnd": 460742,
+      "pid": 13124,
+      "class_name": "TEdit",
+      "caption": "---",
+      "object_addresses": [
+        79245568
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        713,
+        951,
+        802,
+        979
+      ]
+    },
+    {
+      "hwnd": 460758,
+      "pid": 13124,
+      "class_name": "TEdit",
+      "caption": "1.0",
+      "object_addresses": [
+        79244192
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        808,
+        917,
+        898,
+        945
+      ]
+    },
+    {
+      "hwnd": 854188,
+      "pid": 13124,
+      "class_name": "TEdit",
+      "caption": "1.0",
+      "object_addresses": [
+        79242816
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        713,
+        918,
+        802,
+        946
+      ]
+    },
+    {
+      "hwnd": 394886,
+      "pid": 13124,
+      "class_name": "TMediaPlayer",
+      "caption": "",
+      "object_addresses": [
+        79793808
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        467,
+        90,
+        496,
+        115
+      ]
+    },
+    {
+      "hwnd": 983634,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79314288
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        178,
+        53,
+        238,
+        81
+      ]
+    },
+    {
+      "hwnd": 460274,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79315792
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        0,
+        53,
+        118,
+        81
+      ]
+    },
+    {
+      "hwnd": 590974,
+      "pid": 13124,
+      "class_name": "TPageControl",
+      "caption": "",
+      "object_addresses": [
+        79312784
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        914,
+        615,
+        1274,
+        990
+      ]
+    },
+    {
+      "hwnd": 395862,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u30c9\u30fc\u30e0",
+      "object_addresses": [
+        79237312
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 590974,
+      "rect": [
+        918,
+        646,
+        1270,
+        986
+      ]
+    },
+    {
+      "hwnd": 199468,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "ON",
+      "object_addresses": [
+        79362416
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 395862,
+      "rect": [
+        1183,
+        701,
+        1263,
+        725
+      ]
+    },
+    {
+      "hwnd": 199472,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "OFF",
+      "object_addresses": [
+        79360912
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 395862,
+      "rect": [
+        1098,
+        701,
+        1178,
+        725
+      ]
+    },
+    {
+      "hwnd": 919958,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u30c9\u30fc\u30e0\u306e\u539f\u70b9\u5fa9\u5e30",
+      "object_addresses": [
+        79359408
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 395862,
+      "rect": [
+        923,
+        771,
+        1088,
+        795
+      ]
+    },
+    {
+      "hwnd": 919952,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u9589",
+      "object_addresses": [
+        79357904
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 395862,
+      "rect": [
+        923,
+        861,
+        978,
+        885
+      ]
+    },
+    {
+      "hwnd": 1181874,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u505c\u6b62",
+      "object_addresses": [
+        79356400
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 395862,
+      "rect": [
+        978,
+        861,
+        1033,
+        885
+      ]
+    },
+    {
+      "hwnd": 1051084,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u958b",
+      "object_addresses": [
+        79354896
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 395862,
+      "rect": [
+        1033,
+        861,
+        1088,
+        885
+      ]
+    },
+    {
+      "hwnd": 723644,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u30c9\u30fc\u30e0\u65b9\u4f4d\u306e\u4fee\u6b63",
+      "object_addresses": [
+        79353392
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 395862,
+      "rect": [
+        923,
+        736,
+        1088,
+        760
+      ]
+    },
+    {
+      "hwnd": 723490,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "OFF",
+      "object_addresses": [
+        79351888
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 395862,
+      "rect": [
+        923,
+        701,
+        1003,
+        725
+      ]
+    },
+    {
+      "hwnd": 1443776,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "ON",
+      "object_addresses": [
+        79350384
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 395862,
+      "rect": [
+        1008,
+        701,
+        1088,
+        725
+      ]
+    },
+    {
+      "hwnd": 133696,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u671b\u9060\u93e1",
+      "object_addresses": [
+        79235936
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 590974,
+      "rect": [
+        918,
+        646,
+        1270,
+        986
+      ]
+    },
+    {
+      "hwnd": 722996,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u6c34\u5e73\u30bb\u30f3\u30b5\u30fc\u89e3\u9664",
+      "object_addresses": [
+        79348880
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        923,
+        951,
+        1088,
+        975
+      ]
+    },
+    {
+      "hwnd": 1443730,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u6708\u6642",
+      "object_addresses": [
+        79347376
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        1153,
+        701,
+        1208,
+        725
+      ]
+    },
+    {
+      "hwnd": 526180,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u505c\u6b62",
+      "object_addresses": [
+        79345872
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1153,
+        951,
+        1208,
+        975
+      ]
+    },
+    {
+      "hwnd": 1048822,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u2193",
+      "object_addresses": [
+        79344368
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        993,
+        731,
+        1018,
+        756
+      ]
+    },
+    {
+      "hwnd": 396002,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u2192",
+      "object_addresses": [
+        79342864
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        1018,
+        706,
+        1043,
+        731
+      ]
+    },
+    {
+      "hwnd": 527088,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u25ce",
+      "object_addresses": [
+        79341360
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        993,
+        706,
+        1018,
+        731
+      ]
+    },
+    {
+      "hwnd": 396010,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u2190",
+      "object_addresses": [
+        79339856
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        968,
+        706,
+        993,
+        731
+      ]
+    },
+    {
+      "hwnd": 527090,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u2191",
+      "object_addresses": [
+        79338352
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        993,
+        681,
+        1018,
+        706
+      ]
+    },
+    {
+      "hwnd": 330314,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u671b\u9060\u93e1\u306e\u539f\u70b9\u5fa9\u5e30",
+      "object_addresses": [
+        79336848
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1098,
+        786,
+        1263,
+        810
+      ]
+    },
+    {
+      "hwnd": 395816,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u6052\u661f",
+      "object_addresses": [
+        79335344
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        1208,
+        701,
+        1263,
+        725
+      ]
+    },
+    {
+      "hwnd": 395904,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u505c\u6b62",
+      "object_addresses": [
+        79333840
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1098,
+        725,
+        1263,
+        749
+      ]
+    },
+    {
+      "hwnd": 1115396,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u592a\u967d",
+      "object_addresses": [
+        79332336
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        1098,
+        701,
+        1153,
+        725
+      ]
+    },
+    {
+      "hwnd": 199222,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "GID",
+      "object_addresses": [
+        79330832
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1033,
+        786,
+        1088,
+        810
+      ]
+    },
+    {
+      "hwnd": 133684,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "MID",
+      "object_addresses": [
+        79329328
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        978,
+        786,
+        1033,
+        810
+      ]
+    },
+    {
+      "hwnd": 133682,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "SET",
+      "object_addresses": [
+        79327824
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        923,
+        786,
+        978,
+        810
+      ]
+    },
+    {
+      "hwnd": 133680,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u9589",
+      "object_addresses": [
+        79326320
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1098,
+        951,
+        1153,
+        975
+      ]
+    },
+    {
+      "hwnd": 133678,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u958b",
+      "object_addresses": [
+        79324816
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1208,
+        951,
+        1263,
+        975
+      ]
+    },
+    {
+      "hwnd": 133690,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "OUT",
+      "object_addresses": [
+        79323312
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1208,
+        866,
+        1263,
+        890
+      ]
+    },
+    {
+      "hwnd": 133688,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u505c\u6b62",
+      "object_addresses": [
+        79321808
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1153,
+        866,
+        1208,
+        890
+      ]
+    },
+    {
+      "hwnd": 133694,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "IN",
+      "object_addresses": [
+        79320304
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 133696,
+      "rect": [
+        1098,
+        866,
+        1153,
+        890
+      ]
+    },
+    {
+      "hwnd": 133698,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u671b\u9060\u93e1\u5ea7\u6a19\u306e\u4fee\u6b63",
+      "object_addresses": [
+        79318800
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 133696,
+      "rect": [
+        1098,
+        761,
+        1263,
+        785
+      ]
+    },
+    {
+      "hwnd": 1247162,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u5236\u5fa1",
+      "object_addresses": [
+        79240064
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 590974,
+      "rect": [
+        918,
+        646,
+        1270,
+        986
+      ]
+    },
+    {
+      "hwnd": 985246,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u7121\u52b9",
+      "object_addresses": [
+        79201200
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1247162,
+      "rect": [
+        1183,
+        701,
+        1263,
+        725
+      ]
+    },
+    {
+      "hwnd": 526770,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u6709\u52b9",
+      "object_addresses": [
+        79199696
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1247162,
+      "rect": [
+        1098,
+        701,
+        1178,
+        725
+      ]
+    },
+    {
+      "hwnd": 723076,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u5f37\u5236\u6642\u523b\u5408\u308f\u305b",
+      "object_addresses": [
+        79198192
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 1247162,
+      "rect": [
+        923,
+        957,
+        1088,
+        981
+      ]
+    },
+    {
+      "hwnd": 461258,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u30a8\u30e9\u30fc\u89e3\u9664",
+      "object_addresses": [
+        79196688
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1247162,
+      "rect": [
+        923,
+        701,
+        1088,
+        725
+      ]
+    },
+    {
+      "hwnd": 1508610,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u901a\u4fe1\u30dd\u30fc\u30c8\u518d\u63a5\u7d9a",
+      "object_addresses": [
+        79195184
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 1247162,
+      "rect": [
+        923,
+        871,
+        1088,
+        895
+      ]
+    },
+    {
+      "hwnd": 657692,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "OFF",
+      "object_addresses": [
+        79193680
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 1247162,
+      "rect": [
+        923,
+        785,
+        1003,
+        809
+      ]
+    },
+    {
+      "hwnd": 461120,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "ON",
+      "object_addresses": [
+        79192176
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1247162,
+      "rect": [
+        1008,
+        785,
+        1088,
+        809
+      ]
+    },
+    {
+      "hwnd": 133700,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u53f3\u56de\u8ee2",
+      "object_addresses": [
+        79311280
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        1209,
+        540,
+        1264,
+        564
+      ]
+    },
+    {
+      "hwnd": 133702,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u5de6\u56de\u8ee2",
+      "object_addresses": [
+        79309776
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        1093,
+        540,
+        1148,
+        564
+      ]
+    },
+    {
+      "hwnd": 199228,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u505c\u6b62",
+      "object_addresses": [
+        79308272
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        1149,
+        540,
+        1209,
+        564
+      ]
+    },
+    {
+      "hwnd": 264888,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u4e2d\u5fc3",
+      "object_addresses": [
+        79306768
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        316,
+        53,
+        356,
+        81
+      ]
+    },
+    {
+      "hwnd": 199308,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u62e1\u5927",
+      "object_addresses": [
+        79305264
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        238,
+        53,
+        279,
+        81
+      ]
+    },
+    {
+      "hwnd": 133676,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u7e2e\u5c0f",
+      "object_addresses": [
+        79303760
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        277,
+        53,
+        318,
+        81
+      ]
+    },
+    {
+      "hwnd": 460402,
+      "pid": 13124,
+      "class_name": "TMediaPlayer",
+      "caption": "",
+      "object_addresses": [
+        79792000
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        441,
+        90,
+        470,
+        115
+      ]
+    },
+    {
+      "hwnd": 657022,
+      "pid": 13124,
+      "class_name": "TMediaPlayer",
+      "caption": "",
+      "object_addresses": [
+        79790192
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        412,
+        90,
+        441,
+        115
+      ]
+    },
+    {
+      "hwnd": 2885488,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u76ee\u6a19\u5929\u4f53\u306b\u79fb\u52d5",
+      "object_addresses": [
+        79302256
+      ],
+      "visible": true,
+      "enabled": true,
+      "parent": 1048596,
+      "rect": [
+        913,
+        515,
+        1083,
+        539
+      ]
+    },
+    {
+      "hwnd": 1116698,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u79fb\u52d5\u4e2d\u6b62",
+      "object_addresses": [
+        79300752
+      ],
+      "visible": true,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        913,
+        540,
+        1083,
+        564
+      ]
+    },
+    {
+      "hwnd": 1639864,
+      "pid": 13124,
+      "class_name": "TFormManuTrack",
+      "caption": "ManualTracking",
+      "object_addresses": [
+        129364912
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        208,
+        208,
+        427,
+        428
+      ]
+    },
+    {
+      "hwnd": 787620,
+      "pid": 13124,
+      "class_name": "TFormEnding",
+      "caption": "\u7d42\u4e86\u51e6\u7406",
+      "object_addresses": [
+        129360944
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        156,
+        156,
+        551,
+        461
+      ]
+    },
+    {
+      "hwnd": 591040,
+      "pid": 13124,
+      "class_name": "TFormObsMenuEdit",
+      "caption": "\u89b3\u6e2c\u30e1\u30cb\u30e5\u30fc",
+      "object_addresses": [
+        129356976
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        78,
+        78,
+        646,
+        695
+      ]
+    },
+    {
+      "hwnd": 394420,
+      "pid": 13124,
+      "class_name": "TFormSolsEdit",
+      "caption": "\u592a\u967d\u7cfb\u5929\u4f53\u306e\u767b\u9332",
+      "object_addresses": [
+        80305840
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        52,
+        52,
+        780,
+        656
+      ]
+    },
+    {
+      "hwnd": 721538,
+      "pid": 13124,
+      "class_name": "TFormOutSolEdit",
+      "caption": "\u6df1\u5b87\u5b99\u5929\u4f53\u306e\u767b\u9332",
+      "object_addresses": [
+        80301488
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        26,
+        26,
+        754,
+        656
+      ]
+    },
+    {
+      "hwnd": 5047978,
+      "pid": 13124,
+      "class_name": "TFormSeizaList",
+      "caption": "\u5929\u4f53\u4e00\u89a7\u8868",
+      "object_addresses": [
+        129354992
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        26,
+        26,
+        492,
+        608
+      ]
+    },
+    {
+      "hwnd": 525382,
+      "pid": 13124,
+      "class_name": "TRadioGroup",
+      "caption": " \u4e00\u89a7\u8868\u5909\u66f4 ",
+      "object_addresses": [
+        129819328
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 5047978,
+      "rect": [
+        46,
+        490,
+        471,
+        591
+      ]
+    },
+    {
+      "hwnd": 657184,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3059\u3079\u3066\u306e\u661f\u96f2\u30fb\u661f\u56e3",
+      "object_addresses": [
+        79669728
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        261,
+        561,
+        468,
+        587
+      ]
+    },
+    {
+      "hwnd": 328860,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3059\u3079\u3066\u306e\u592a\u967d\u7cfb\u5929\u4f53",
+      "object_addresses": [
+        79668464
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        261,
+        535,
+        468,
+        561
+      ]
+    },
+    {
+      "hwnd": 329486,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3059\u3079\u3066\u306e\u661f\u5ea7",
+      "object_addresses": [
+        79667200
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        261,
+        509,
+        468,
+        535
+      ]
+    },
+    {
+      "hwnd": 460004,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3044\u307e\u898b\u3048\u308b\u661f\u96f2\u30fb\u661f\u56e3",
+      "object_addresses": [
+        79665936
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        54,
+        561,
+        261,
+        587
+      ]
+    },
+    {
+      "hwnd": 459438,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3044\u307e\u898b\u3048\u308b\u592a\u967d\u7cfb\u5929\u4f53",
+      "object_addresses": [
+        79664672
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        54,
+        535,
+        261,
+        561
+      ]
+    },
+    {
+      "hwnd": 394464,
+      "pid": 13124,
+      "class_name": "TGroupButton",
+      "caption": "\u3044\u307e\u898b\u3048\u308b\u661f\u5ea7",
+      "object_addresses": [
+        79663408
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525382,
+      "rect": [
+        54,
+        509,
+        261,
+        535
+      ]
+    },
+    {
+      "hwnd": 789020,
+      "pid": 13124,
+      "class_name": "TFormManuTrack",
+      "caption": "ManualTracking",
+      "object_addresses": [
+        129353008
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        234,
+        234,
+        453,
+        454
+      ]
+    },
+    {
+      "hwnd": 459994,
+      "pid": 13124,
+      "class_name": "TFormPosKey",
+      "caption": "\u76ee\u6a19\u5929\u4f53\u5ea7\u6a19\u306e\u76f4\u63a5\u5165\u529b",
+      "object_addresses": [
+        129351024
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        208,
+        208,
+        544,
+        493
+      ]
+    },
+    {
+      "hwnd": 328834,
+      "pid": 13124,
+      "class_name": "TFormContSet",
+      "caption": "\u30b3\u30f3\u30c8\u30ed\u30fc\u30e9\u8a2d\u5b9a",
+      "object_addresses": [
+        129503840
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        182,
+        182,
+        568,
+        997
+      ]
+    },
+    {
+      "hwnd": 459898,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129577424
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 328834,
+      "rect": [
+        443,
+        854,
+        543,
+        880
+      ]
+    },
+    {
+      "hwnd": 460382,
+      "pid": 13124,
+      "class_name": "Edit",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 459898,
+      "rect": [
+        446,
+        857,
+        523,
+        877
+      ]
+    },
+    {
+      "hwnd": 525502,
+      "pid": 13124,
+      "class_name": "TFormParamSet",
+      "caption": "\u30d1\u30e9\u30e1\u30fc\u30bf\u8a2d\u5b9a",
+      "object_addresses": [
+        79546544
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        156,
+        156,
+        646,
+        642
+      ]
+    },
+    {
+      "hwnd": 329530,
+      "pid": 13124,
+      "class_name": "TPageControl",
+      "caption": "",
+      "object_addresses": [
+        79207216
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 525502,
+      "rect": [
+        170,
+        195,
+        630,
+        626
+      ]
+    },
+    {
+      "hwnd": 198372,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u7279\u52254",
+      "object_addresses": [
+        129775296
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        174,
+        226,
+        626,
+        622
+      ]
+    },
+    {
+      "hwnd": 917836,
+      "pid": 13124,
+      "class_name": "TGroupBox",
+      "caption": "\u88dc\u6b63\u65b9\u5411",
+      "object_addresses": [
+        79657088
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 198372,
+      "rect": [
+        195,
+        431,
+        608,
+        582
+      ]
+    },
+    {
+      "hwnd": 264788,
+      "pid": 13124,
+      "class_name": "TGroupBox",
+      "caption": "\u7b2c4\u8c61\u9650",
+      "object_addresses": [
+        79662144
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 917836,
+      "rect": [
+        506,
+        464,
+        602,
+        568
+      ]
+    },
+    {
+      "hwnd": 198356,
+      "pid": 13124,
+      "class_name": "TGroupBox",
+      "caption": "\u7b2c3\u8c61\u9650",
+      "object_addresses": [
+        79660880
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 917836,
+      "rect": [
+        404,
+        464,
+        500,
+        568
+      ]
+    },
+    {
+      "hwnd": 722808,
+      "pid": 13124,
+      "class_name": "TGroupBox",
+      "caption": "\u7b2c2\u8c61\u9650",
+      "object_addresses": [
+        79659616
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 917836,
+      "rect": [
+        302,
+        464,
+        398,
+        568
+      ]
+    },
+    {
+      "hwnd": 526074,
+      "pid": 13124,
+      "class_name": "TGroupBox",
+      "caption": "\u7b2c1\u8c61\u9650",
+      "object_addresses": [
+        79658352
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 917836,
+      "rect": [
+        200,
+        464,
+        296,
+        568
+      ]
+    },
+    {
+      "hwnd": 853842,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u7279\u52252",
+      "object_addresses": [
+        129765664
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        174,
+        226,
+        626,
+        622
+      ]
+    },
+    {
+      "hwnd": 328920,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129902112
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 853842,
+      "rect": [
+        313,
+        393,
+        392,
+        420
+      ]
+    },
+    {
+      "hwnd": 722156,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129900608
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 853842,
+      "rect": [
+        313,
+        365,
+        392,
+        392
+      ]
+    },
+    {
+      "hwnd": 786982,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129899104
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 853842,
+      "rect": [
+        313,
+        263,
+        392,
+        290
+      ]
+    },
+    {
+      "hwnd": 722034,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129897600
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 853842,
+      "rect": [
+        313,
+        319,
+        392,
+        346
+      ]
+    },
+    {
+      "hwnd": 656598,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129896096
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 853842,
+      "rect": [
+        313,
+        291,
+        392,
+        318
+      ]
+    },
+    {
+      "hwnd": 3017220,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u7279\u5225",
+      "object_addresses": [
+        129760160
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        174,
+        226,
+        626,
+        622
+      ]
+    },
+    {
+      "hwnd": 852242,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129891584
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        514,
+        385,
+        539
+      ]
+    },
+    {
+      "hwnd": 395068,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129890080
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        514,
+        601,
+        539
+      ]
+    },
+    {
+      "hwnd": 655690,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129888576
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        486,
+        385,
+        511
+      ]
+    },
+    {
+      "hwnd": 591554,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129887072
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        486,
+        601,
+        511
+      ]
+    },
+    {
+      "hwnd": 787768,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129885568
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        374,
+        601,
+        401
+      ]
+    },
+    {
+      "hwnd": 525960,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129884064
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        458,
+        385,
+        485
+      ]
+    },
+    {
+      "hwnd": 329516,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129882560
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        430,
+        385,
+        457
+      ]
+    },
+    {
+      "hwnd": 722154,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129881056
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        402,
+        385,
+        429
+      ]
+    },
+    {
+      "hwnd": 263982,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129879552
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        374,
+        385,
+        401
+      ]
+    },
+    {
+      "hwnd": 657076,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129878048
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        318,
+        601,
+        345
+      ]
+    },
+    {
+      "hwnd": 591664,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129876544
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        290,
+        385,
+        317
+      ]
+    },
+    {
+      "hwnd": 460556,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129875040
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        402,
+        601,
+        429
+      ]
+    },
+    {
+      "hwnd": 460540,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129870528
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        318,
+        385,
+        345
+      ]
+    },
+    {
+      "hwnd": 395874,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129869024
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        293,
+        262,
+        385,
+        289
+      ]
+    },
+    {
+      "hwnd": 786934,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129867520
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        321,
+        346,
+        385,
+        373
+      ]
+    },
+    {
+      "hwnd": 526166,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129866016
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        262,
+        601,
+        289
+      ]
+    },
+    {
+      "hwnd": 263900,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        129864512
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        290,
+        601,
+        317
+      ]
+    },
+    {
+      "hwnd": 329510,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79234288
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 3017220,
+      "rect": [
+        537,
+        458,
+        601,
+        485
+      ]
+    },
+    {
+      "hwnd": 394438,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u89b3\u6e2c\u5730\u60c5\u5831",
+      "object_addresses": [
+        79278592
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        174,
+        226,
+        626,
+        622
+      ]
+    },
+    {
+      "hwnd": 263976,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79232784
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 394438,
+      "rect": [
+        431,
+        380,
+        501,
+        407
+      ]
+    },
+    {
+      "hwnd": 395818,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79231280
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 394438,
+      "rect": [
+        359,
+        380,
+        427,
+        407
+      ]
+    },
+    {
+      "hwnd": 394882,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79226768
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 394438,
+      "rect": [
+        212,
+        308,
+        293,
+        335
+      ]
+    },
+    {
+      "hwnd": 330322,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79225264
+      ],
+      "visible": false,
+      "enabled": false,
+      "parent": 394438,
+      "rect": [
+        212,
+        268,
+        293,
+        295
+      ]
+    },
+    {
+      "hwnd": 395078,
+      "pid": 13124,
+      "class_name": "TTabSheet",
+      "caption": "\u7d42\u4e86\u51e6\u7406",
+      "object_addresses": [
+        79268960
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        174,
+        226,
+        626,
+        622
+      ]
+    },
+    {
+      "hwnd": 525952,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79222256
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        395,
+        452,
+        422
+      ]
+    },
+    {
+      "hwnd": 263910,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79220752
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        289,
+        452,
+        316
+      ]
+    },
+    {
+      "hwnd": 330320,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79219248
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        367,
+        452,
+        394
+      ]
+    },
+    {
+      "hwnd": 1050490,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79217744
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        423,
+        452,
+        450
+      ]
+    },
+    {
+      "hwnd": 1311634,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79216240
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        339,
+        452,
+        366
+      ]
+    },
+    {
+      "hwnd": 657012,
+      "pid": 13124,
+      "class_name": "TComboBox",
+      "caption": "",
+      "object_addresses": [
+        79211728
+      ],
+      "visible": false,
+      "enabled": true,
+      "parent": 395078,
+      "rect": [
+        372,
+        261,
+        452,
+        288
+      ]
+    },
+    {
+      "hwnd": 657224,
+      "pid": 13124,
+      "class_name": "msctls_updown32",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 329530,
+      "rect": [
+        588,
+        199,
+        630,
+        220
+      ]
+    },
+    {
+      "hwnd": 1444002,
+      "pid": 13124,
+      "class_name": "TApplication",
+      "caption": "MASTER2014.03EQ",
+      "object_addresses": [],
+      "visible": true,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        960,
+        540,
+        960,
+        540
+      ]
+    },
+    {
+      "hwnd": 853132,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 328880,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 394518,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 590916,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        26,
+        100,
+        172
+      ]
+    },
+    {
+      "hwnd": 1049886,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 328924,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 1507634,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        79,
+        143
+      ]
+    },
+    {
+      "hwnd": 526008,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        79,
+        67
+      ]
+    },
+    {
+      "hwnd": 591636,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        79,
+        67
+      ]
+    },
+    {
+      "hwnd": 656964,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        79,
+        181
+      ]
+    },
+    {
+      "hwnd": 721564,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        79,
+        143
+      ]
+    },
+    {
+      "hwnd": 394986,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        25,
+        64,
+        146
+      ]
+    },
+    {
+      "hwnd": 657094,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        25,
+        64,
+        61
+      ]
+    },
+    {
+      "hwnd": 1312398,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        25,
+        64,
+        61
+      ]
+    },
+    {
+      "hwnd": 984688,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        25,
+        64,
+        61
+      ]
+    },
+    {
+      "hwnd": 460548,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        105
+      ]
+    },
+    {
+      "hwnd": 918990,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 591646,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 329522,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 1115816,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 460612,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 1376540,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 657242,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 329462,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 722780,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        92,
+        86
+      ]
+    },
+    {
+      "hwnd": 264046,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 263906,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        86
+      ]
+    },
+    {
+      "hwnd": 263902,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 526108,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        64,
+        67
+      ]
+    },
+    {
+      "hwnd": 263896,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        70,
+        181
+      ]
+    },
+    {
+      "hwnd": 460426,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        68,
+        67
+      ]
+    },
+    {
+      "hwnd": 329508,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        81,
+        67
+      ]
+    },
+    {
+      "hwnd": 263904,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        81,
+        67
+      ]
+    },
+    {
+      "hwnd": 329506,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 263894,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 263912,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 1377424,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 1509136,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 1049922,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        27,
+        80,
+        67
+      ]
+    },
+    {
+      "hwnd": 722740,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 983914,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        28,
+        60,
+        190
+      ]
+    },
+    {
+      "hwnd": 721576,
+      "pid": 13124,
+      "class_name": "ComboLBox",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": 65548,
+      "rect": [
+        0,
+        28,
+        118,
+        90
+      ]
+    },
+    {
+      "hwnd": 394304,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 720994,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 852024,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 525818,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 263664,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 1838010,
+      "pid": 13124,
+      "class_name": "TPUtilWindow",
+      "caption": "",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": true,
+      "parent": null,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 591714,
+      "pid": 13124,
+      "class_name": "IME",
+      "caption": "Default IME",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 1048596,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "hwnd": 1310862,
+      "pid": 13124,
+      "class_name": "MSCTFIME UI",
+      "caption": "MSCTFIME UI",
+      "object_addresses": [],
+      "visible": false,
+      "enabled": false,
+      "parent": 591714,
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "position": {
+    "sampled_at_utc": "2026-09-18T10:53:03.711077+00:00",
+    "source": "Master2018 process memory; experimental",
+    "controller_data_freshness": "unknown",
+    "ra_j2000_hours": 13.092355594842436,
+    "dec_j2000_deg": 87.79693653557827,
+    "azimuth_software_deg": 2.771984647386712,
+    "altitude_software_deg": 35.101910810414076,
+    "raw": {
+      "TelPosLon": 2.771984647386712,
+      "TelPosLat": 35.101910810414076,
+      "TelPosJ2kRa": 13.092355594842436,
+      "TelPosJ2kDec": 87.79693653557827,
+      "TelPosIntRa": 13.445333333333334,
+      "TelPosIntDec": 87.5475,
+      "DomRotDir": 178.7,
+      "DomRotAutoFlag": 0,
+      "TelStat": 1,
+      "DomRtSt": 1,
+      "DomSlSt": 3,
+      "ContModeSt": 1,
+      "PwrStat": 2,
+      "EmgStat": 1,
+      "CntStat": 1,
+      "RainStat": 0,
+      "ComStat": 2
+    }
+  },
+  "resolved": {
+    "power:on": {
+      "error": "\u5236\u5fa1\u30bf\u30d6\u306e\u6709\u52b9\u306a\u300cON\u300d\u3092\u4e00\u610f\u306b\u7279\u5b9a\u3067\u304d\u307e\u305b\u3093 (0\u4ef6)\u3002\u5bfe\u8c61\u30bf\u30d6\u3092\u8868\u793a\u3057\u3066\u304f\u3060\u3055\u3044"
+    },
+    "power:off": {
+      "error": "\u5236\u5fa1\u30bf\u30d6\u306e\u6709\u52b9\u306a\u300cOFF\u300d\u3092\u4e00\u610f\u306b\u7279\u5b9a\u3067\u304d\u307e\u305b\u3093 (0\u4ef6)\u3002\u5bfe\u8c61\u30bf\u30d6\u3092\u8868\u793a\u3057\u3066\u304f\u3060\u3055\u3044"
+    },
+    "slit:open": {
+      "hwnd": 1051084,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u958b",
+      "object_addresses": [
+        79354896
+      ],
+      "visible": true,
+      "enabled": true
+    },
+    "slit:close": {
+      "hwnd": 919952,
+      "pid": 13124,
+      "class_name": "TButton",
+      "caption": "\u9589",
+      "object_addresses": [
+        79357904
+      ],
+      "visible": true,
+      "enabled": true
+    },
+    "slit:stop": {
+      "error": "\u30c9\u30fc\u30e0\u30bf\u30d6\u306e\u6709\u52b9\u306a\u300c\u505c\u6b62\u300d\u3092\u4e00\u610f\u306b\u7279\u5b9a\u3067\u304d\u307e\u305b\u3093 (0\u4ef6)\u3002\u5bfe\u8c61\u30bf\u30d6\u3092\u8868\u793a\u3057\u3066\u304f\u3060\u3055\u3044"
+    },
+    "sidereal:on": {
+      "error": "\u671b\u9060\u93e1\u30bf\u30d6\u306e\u6709\u52b9\u306a\u300c\u6052\u661f\u300d\u3092\u4e00\u610f\u306b\u7279\u5b9a\u3067\u304d\u307e\u305b\u3093 (0\u4ef6)\u3002\u5bfe\u8c61\u30bf\u30d6\u3092\u8868\u793a\u3057\u3066\u304f\u3060\u3055\u3044"
+    },
+    "sidereal:off": {
+      "error": "\u671b\u9060\u93e1\u30bf\u30d6\u306e\u6709\u52b9\u306a\u300c\u505c\u6b62\u300d\u3092\u4e00\u610f\u306b\u7279\u5b9a\u3067\u304d\u307e\u305b\u3093 (0\u4ef6)\u3002\u5bfe\u8c61\u30bf\u30d6\u3092\u8868\u793a\u3057\u3066\u304f\u3060\u3055\u3044"
+    }
+  }
+}
