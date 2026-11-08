@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 .mplconfig/
+*/pictures/02_slit_guide_images/slit_guide_image_loop.fit
+*/observation/scat_observation/scat_guide_tracking_system/.config

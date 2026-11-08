@@ -185,9 +185,15 @@ def panel():
                 st.write(f'冷却　{cooling_status}')
                 t = s.get('temperature')
                 st.write(f'カメラ温度　{float(t):.1f} °C' if t is not None else 'カメラ温度　--.- °C')
-                guide.c['temperature_c'] = st.number_input(
+                temperature_input, temperature_update = st.columns([3, 1])
+                temperature_value = temperature_input.number_input(
                     '目標温度 °C', value=float(guide.c.get('temperature_c', 0.0)),
                     step=0.1, format='%.1f', key='target_temperature_c')
+                temperature_update.button('更新', disabled=not s.get('connected'),
+                                          on_click=guide.update_temperature,
+                                          args=(temperature_value,))
+                if s.get('temperature_error'):
+                    st.error(s['temperature_error'])
                 st.write(f"撮像　{s.get('imaging_state', '待機中')}")
                 st.write(f"操作　{s['state']}（Frame {s['frame']}）")
                 if s['state'] == '校正中':

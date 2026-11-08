@@ -204,6 +204,9 @@ class GuideCamera(AtikCamera):
         self.set_ccd_temperature(self.c['temperature_c'])
         deadline = time.monotonic() + self.c['cooling_timeout_sec']
         while abs(float(self.camera.CCDTemperature) - self.c['temperature_c']) > self.c['temperature_tolerance_c']:
+            apply_update = getattr(self, 'apply_temperature_update', None)
+            if apply_update is not None:
+                apply_update()
             # 冷却待ちの途中でもOFF要求に応答する。接続は維持する。
             off = getattr(self, 'cooling_off_event', None)
             if off is not None and off.is_set():

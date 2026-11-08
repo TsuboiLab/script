@@ -399,7 +399,32 @@ class GuideService:
         """UIでは要求のみ発行し、カメラ所有workerで実際にOFFにする。"""
         self.cooling_off_event.set()
 
+    def update_temperature(self, value):
+        """UIから要求だけを予約し、COM操作はカメラ所有workerで行う。"""
+        value = float(value)
+        if not np.isfinite(value):
+            return
+        with self.lock:
+            self.pending_temperature = value
+
+    def _apply_temperature(self, camera):
+        if camera is None:
+            return
+        with self.lock:
+            value = getattr(self, 'pending_temperature', None)
+            self.pending_temperature = None
+        if value is None:
+            return
+        try:
+            if not self.c['simulation']:
+                camera.set_ccd_temperature(value)
+            self.c['temperature_c'] = value
+            self.publish(temperature_error='', applied_temperature_c=value)
+        except Exception as exc:
+            self.publish(temperature_error=f'目標温度の更新失敗: {exc}')
+
     def _apply_cooling_off(self, camera):
+        self._apply_temperature(camera)
         if camera is not None and self.cooling_off_event.is_set():
             if not self.c['simulation']:
                 camera.camera.CoolerOn = False
@@ -537,6 +562,7 @@ class GuideService:
                             from .base__atik_camera_contloer import GuideCamera
                             camera = GuideCamera(self.c)
                             camera.cooling_off_event = self.cooling_off_event
+                            camera.apply_temperature_update = lambda: self._apply_temperature(camera)
                         camera.connect()
                         # ASCOMプロパティはカメラ所有workerだけで読む。
                         if not self.c['simulation'] and self.camera_factory is None:

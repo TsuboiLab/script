@@ -6,13 +6,18 @@ import json
 import math
 import re
 import time
-from datetime import datetime
 from pathlib import Path
 
 
 class MotionLogWaiter:
     def __init__(self, directory, ra, dec):
-        self.path = Path(directory) / datetime.now().strftime('MonitorLog%Y%m%d.log')
+        self.directory = Path(directory)
+        logs = list(self.directory.glob('MonitorLog*.log'))
+        if not logs:
+            raise FileNotFoundError(f'MoTログがありません: {self.directory}')
+        # MoTは起動日のファイルへ翌日も書く。日付名ではなく更新時刻で選ぶ。
+        self.offsets = {p: p.stat().st_size for p in logs}
+        self.path = max(logs, key=lambda p: p.stat().st_mtime_ns)
         # 読み取り不可・ログ未生成なら移動を送る前に失敗させる。
         with self.path.open('rb') as stream:
             stream.seek(0, 2)
@@ -72,6 +77,7 @@ class MotionLogWaiter:
                 stream.seek(self.offset)
                 chunk = stream.read()
                 self.offset = stream.tell()
+            self.offsets[self.path] = self.offset
             self.pending += chunk
             while b'\n' in self.pending:
                 line, self.pending = self.pending.split(b'\n', 1)
@@ -92,5 +98,15 @@ class MotionLogWaiter:
                         raise TimeoutError(
                             f'移動完了後に恒星追尾へ復帰しませんでした（状態={last_status!r}）')
                     return
+            # 現在ファイルを読み切ってから、別ファイルへの追記を検出する。
+            # 既存ログは送信前の末尾、新規ログは先頭から読み、過去命令を混ぜない。
+            changed = [p for p in self.directory.glob('MonitorLog*.log')
+                       if p != self.path and p.stat().st_size > self.offsets.get(p, 0)]
+            if changed:
+                if self.pending:
+                    raise RuntimeError('MoTログ切替時に未完了の行があります')
+                self.path = min(changed, key=lambda p: p.stat().st_mtime_ns)
+                self.offset = self.offsets.get(self.path, 0)
+                continue
             cancel.wait(.1)
         raise RuntimeError('停止応答待ちを中止しました（自動再送なし）')
